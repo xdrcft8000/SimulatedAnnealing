@@ -1,0 +1,91 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+  </head>
+  <body>
+    <div>
+  <canvas id="myChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['50', '100', '500', '1000', '5000', '10000'],
+      datasets: [{
+        label: 'ti = 0.4',
+        data: [71.9, 72.0, 77.2, 80.6, 90.5, 87.5],
+        borderWidth: 1
+      },
+      {
+        label: 'ti = 0.6',
+        data: [86.4, 81.1, 83.6, 82.2, 87.7, 91.4],
+        borderWidth: 1
+      },
+      {
+        label: 'ti = 0.8',
+        data: [81, 77.4, 78.5, 81.5, 91.8, 94.6],
+        borderWidth: 1
+      },
+      {
+        label: 'ti = 1',
+        data: [80.1, 82.9, 82.3, 81, 88.4, 104.3],
+        borderWidth: 1
+      },
+      {
+        label: 'ti = 4',
+        data: [78.5, 90.9, 95.1, 101.4, 129.6, 157.2],
+        borderWidth: 1
+      },
+      {
+        label: 'ti = 16',
+        data: [84.5, 84, 96.1, 95.8, 137, 167.8],
+        borderWidth: 1
+      },
+      {
+        label: 'ti = 64',
+        data: [84.5, 88.2, 95.7, 108.7, 154.7, 204.4],
+        borderWidth: 1
+      },
+      {
+        label: 'ti = 128',
+        data: [89.1, 87.9, 99.7, 107.8, 173.5, 248.2],
+        borderWidth: 1
+      },
+
+
+      ]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+          title:{
+            display: true,
+            text: "Runtime (ms)"
+          }
+        },
+        x: {
+          beginAtZero: false,
+          title:{
+            display: true,
+            text: "Tempreture Length"
+          }
+        }
+      }
+    }
+  });
+</script>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+  </head>
+  <body>
+    <div>
+  <canvas id="myChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['10', '20', '40', '80', '160', '500','1000'],
+      datasets: [{
+        label: 'Runtime(ms)',
+        data: [69.4, 66.6, 70.1, 78.2, 83.3, 89.8, 90.8],
+        borderWidth: 1,
+        yAxisID: 'y'
+      },
+      {
+        label: 'Score',
+        data: [597.7,333.1,88.7,73.9,73.5,73.3, 73],
+        borderWidth: 1,
+        yAxisID: 'score'
+      },
+
+
+
+      ]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: false,
+          title:{
+            display: true,
+            text: "Runtime(ms)"
+          }
+        },
+        x: {
+          beginAtZero: false,
+          title:{
+            display: true,
+            text: "num_non_improve"
+          }
+        },
+        score: {
+          beginAtZero: false,
+          title:{
+            display: true,
+            text: "Score"},
+          position: 'right'
+        }
+      }
+    }
+  });
+</script>
+  </body>
+</html>

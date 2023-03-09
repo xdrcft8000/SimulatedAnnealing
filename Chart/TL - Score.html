@@ -1,0 +1,91 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+  </head>
+  <body>
+    <div>
+  <canvas id="myChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['50', '100', '500', '1000', '5000', '10000'],
+      datasets: [{
+        label: 'ti = 0.4',
+        data: [447, 387, 256, 130, 317, 372],
+        borderWidth: 1
+      },
+      {
+        label: 'ti = 0.6',
+        data: [360, 446, 109, 132, 79, 75],
+        borderWidth: 1
+      },
+      {
+        label: 'ti = 0.8',
+        data: [401, 342, 219, 96, 75, 78],
+        borderWidth: 1
+      },
+      {
+        label: 'ti = 1',
+        data: [391, 179, 84, 82, 72, 74],
+        borderWidth: 1
+      },
+      {
+        label: 'ti = 4',
+        data: [276, 101, 82, 72, 74, 72],
+        borderWidth: 1
+      },
+      {
+        label: 'ti = 16',
+        data: [89, 100, 86, 74, 73, 72],
+        borderWidth: 1
+      },
+      {
+        label: 'ti = 64',
+        data: [116, 80, 76, 72, 72, 75],
+        borderWidth: 1
+      },
+      {
+        label: 'ti = 128',
+        data: [181, 90, 84, 80, 74, 74],
+        borderWidth: 1
+      },
+
+
+      ]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+          title:{
+            display: true,
+            text: "Kemeny Score"
+          }
+        },
+        x: {
+          beginAtZero: false,
+          title:{
+            display: true,
+            text: "Tempreture Length"
+          }
+        }
+      }
+    }
+  });
+</script>
+  </body>
+</html>
