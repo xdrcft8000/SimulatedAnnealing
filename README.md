@@ -4,6 +4,8 @@ Tayyeb Rafique
 
 Combinatorial Optimisation Coursework using the Simulated Annealing algorithm to optimise the Kemeny Score of a tournament ranking.
 
+Final Mark: 96/100
+
 A tournament ranking is an ordered list of competitors from best to worst, given a set of tournment results.
 There are multiple ways to determine what makes a good ranking. One way is by measuring it's Kemeny Score.
 The Kemeny Score of a ranking is a rating of how much the order of competitors disagrees with the tournament results.
